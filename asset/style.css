@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(38, 38, 38);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+.header .left {
+    width: 20vw;
+}
+
+.header .right {
+    width: 10vw;
+}
+
+.header .middle {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-right: 9rem;
+}
+
+.header .middle .search-bar {
+    text-align: center;
+}
+
+.header .middle .search-bar input[type=text] {
+    padding: 0.37 0;
+    margin-top: 0.3rem;
+    border: none;
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 10px;
+}
+
+.header .middle .search-bar button {
+    padding: 0.37 0;
+    width: 7%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header .middle .mini-menu {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-evenly;
+   padding: 0px;
+   margin: 0.7rem 1rem 0.3rem 0.3rem;
+}
+
+.header .middle .mini-menu li {
+    font-size: small;
+    cursor: pointer;
+}
+
+.header .middle .mini-menu li:hover {
+    color: orangered;
+}
+
+.flip {
+    transform: scaleX(-1);
+    margin-top: 1rem;
+}
+
+.container {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back-1 {
+    background-image: url("/asset/wallpaper.jpg");
+}
+
+.back-2 {
+    background-image: url("/asset/wallpaper2.jpg");
+}
+
+.box {
+    display: flex; 
+    justify-content: center;
+}
+
+.products {
+    margin-top: 5rem;
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 46.7rem; 
+    height: 71.9rem; 
+    justify-content: space-evenly; 
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    top: 0;
+    flex-basis: 12.5rem;
+    height: 21.5rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+}
+
+.item:hover {
+    top: -10px;
+    border: 2px solid white;
+}
+
+.item img {
+    border-radius: 10px 10px 0 0;
+}
+
+.item-title {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.6rem;
+}
+
+.item-price {
+    margin: 0;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.item-price span {
+    font-size: small;
+}
+
+.item-sold {
+    color: grey;
+}
+
+.floathead {
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(38, 38, 38);
+    margin: 0;
+    width: 100%;
+    z-index: 4;
+    top: 76px;
+}
+
+.floathead h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
