@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-image: url("/Assets/Wallpaper.jpg");
+            height: 100vh;
+        }
+
+        .column {
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="info" style="height: auto; width: 400px; padding: 20px; margin-top: 70px; text-align: center">
+                    <h1>Create an account</h1>
+                    <form action="">
+                        <div class="" style="margin-bottom: 3px;">
+                            <label for="name">Name :</label><br>
+                            <input type="text" id="name" name="name" placeholder="Please input your name" autofocus><br>
+                        </div>
+                        <div class="" style="margin-bottom: 3px;">
+                            <label for="email">Email :</label><br>
+                            <input type="email" id="email" name="email" placeholder="Please input your email"><br>
+                        </div>
+                        <div class="" style="margin-bottom: 3px;">
+                            <label for="phone">Phone Number :</label><br>
+                            <input type="tel" id="phone" name="phone" pattern="^(\+62)8[1-9][0-9]{6,9}$" placeholder="Please start with +62"><br>
+                        </div>
+                        <div class="" style="display: flex; justify-content: center; margin-bottom: 3px;">
+                            <div class="" style="height: auto; width: 200px; text-align: left;">
+                                <p style="margin-top: 3px; margin-bottom: 3px; text-align: center;">Select your package</p>
+                                <div class="" style="margin-left: 10px;">
+                                    <input type="radio" id="frontend" name="career" value="frontend">
+                                    <label for="frontend">Free</label><br>
+                                    <input type="radio" id="backend" name="career" value="backend">
+                                    <label for="backend">Personal</label><br>
+                                    <input type="radio" id="qualityassurance" name="career" value="qualityassurance">
+                                    <label for="qualityassurance">Family</label><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <label for="password">Password :</label><br>
+                            <input type="password" name="password" id="password" placeholder="Input your password">
+                        </div>
+                        <br>
+                        
+                    </form>
+                    <a href="/HTML/profile.html">
+                        <button type="button" style="margin-right: 10px;">Register
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        nav li{
+            float: left;
+            border-radius: 10px;
+        }
+
+        nav li a {
+            display: block;
+            padding: 8px;
+            color: #666;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            border-radius: 10px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-image: url("/Assets/Wallpaper.jpg");
+            height: 100vh;
+        }
+
+        .column {
+            display: flex;
+            justify-content:space-between;
+        }
+
+        .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <section>
+
+        <nav>
+            <ul>
+                <li class="active"><a href="/index.html" style="color: white;">Home</a></li>
+                <li style="float: right; background-color: #f3f3f3;"><a href="/HTML/about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <div class="info" style="height: 250px; width: 700px; padding: 20px; margin-top: 80px; text-align: center">
+                    <h1 style="margin-bottom: 0px;">Welcome to Spotiwai</h1>
+                    <p>Ready to embark on an unparalleled musical adventure? Sign up now and start exploring the world of music like never before. Let the rhythm move you!</p>
+                    <div class="" style="text-align: center;">
+                        <img style="border-radius: 10px" src="/Assets/charlie_puth.png" height="100px" alt="">
+                        <img style="border-radius: 10px; margin-left: 30px; margin-right: 30px;" src="/Assets/rich_brian.jpg" height="100px" alt="">
+                        <img style="border-radius: 10px" src="/Assets/niki.jpg" height="100px" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="info" style="height: 220px; width: 200px; padding: 5px; margin-top: 50px; text-align: center;">
+                        <p style="font-size: 20px;"><strong>Free</strong></p>
+                        <p style="margin-top: 0px; margin-bottom: 0px; margin-left: 40px;"><span style="padding-top: 0px;"><sup>$</sup></span><span style="font-size: 60px;">0</span>/ month</p>
+                        <p style="margin-top: 3px; margin-bottom: 5px;"><small>Enjoy music with ads.</small></p>
+                        <br>
+                        <a href="/HTML/register.html">
+                            <button type="button">Register
+                            </button>
+                        </a>
+                        
+                    </div>
+                    <div class="info" style="height: 220px; width: 200px; padding: 5px; margin-top: 50px; text-align: center">
+                        <p style="font-size: 20px;"><strong>Personal</strong></p>
+                        <p style="margin-top: 0px; margin-bottom: 0px; margin-left: 25px;"><span style="padding-top: 0px;"><sup>$</sup></span><span style="font-size: 60px;">10</span>/ month</p>
+                         <p style="margin-top: 3px; margin-bottom: 5px;"><small>Enjoy music without ads.</small></p>
+                         <br>
+                        <a href="/HTML/register.html">
+                            <button type="button">Register
+                            </button>
+                        </a>
+                    </div>
+                    <div class="info" style="height: 220px; width: 200px; padding: 5px; margin-top: 50px; text-align: center">
+                        <p style="font-size: 20px;"><strong>Family</strong></p>
+                        <p style="margin-top: 0px; margin-bottom: 0px; margin-left: 25px;"><span style="padding-top: 0px;"><sup>$</sup></span><span style="font-size: 60px;">15</span>/ month</p>
+                         <p style="margin-top: 3px; margin-bottom: 5px;"><small>Enjoy music with family and without ads.</small></p>
+                        <a href="/HTML/register.html">
+                            <button type="button">Register
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

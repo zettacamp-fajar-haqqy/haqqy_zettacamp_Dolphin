@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        nav li{
+            float: left;
+            border-radius: 10px;
+        }
+
+        nav li a {
+            display: block;
+            padding: 8px;
+            color: #666;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            border-radius: 10px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-image: url("/Assets/Wallpaper.jpg");
+            height: 100vh;
+        }
+
+        .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="background-color: #f3f3f3;"><a href="/index.html">Home</a></li>
+            <li class="active" style="float: right;" ><a href="/HTML/about.html" style="color: white;">About Us</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container" style="justify-content: space-around;">
+            <div class="row">
+                <div class="info" style="width: 90vw; padding: 20px; margin-top: 100px; display: flex; justify-content: space-between;">
+                    <div class="" style="height: auto; width: 600px; text-align: left">
+                        <h1 style="margin-top: 10px">Spotiwai</h1>
+                        <h3><em>Is a music player platform that you can enjoy with your loved one.</em></h3>
+                        <p>Welcome to <strong>Spotiwai</strong>! We are passionate about music and believe that it has the power to inspire, uplift, and connect people from all walks of life. Our mission is to provide music lovers with a seamless and enjoyable listening experience.</p>
+                        <p>At <strong>Spotiwai</strong>, we strive to offer an exceptional platform that caters to the diverse tastes of our users. Whether you're into chart-toppers, indie gems, or timeless classics, we have a vast library of songs waiting to be explored.</p>
+                        <p>Key Highlights</p>
+                        <ol>
+                            <li>Extensive Music Collection: We curate an extensive collection of songs across various genres, ensuring that there's something for everyone.</li>
+                            <li>Personalized Playlists: Create your own playlists and curate the perfect soundtrack for every moment in your life.</li>
+                            <li>High-Quality Audio: Immerse yourself in crystal-clear sound with our high-quality audio streaming.</li>
+                            <li>Seamless Cross-Device Sync: Your music, your way. Access your playlists and favorite songs on any device, anytime, anywhere.</li>
+                            <li>Discover New Music: Explore our handpicked playlists and curated recommendations to discover new artists and songs.</li>
+                        </ol>
+                    </div>
+                    <div class="info" style="height: auto; width: 650px;">
+                        <h1 style="text-align: center; padding: 0px; margin-top: 10px; margin-bottom: 0px;">Spotiwai Packages</h1>
+                        <ul style="list-style-type: none; margin-top: 0px;">
+                            <li>
+                                <dl>
+                                    <dt>Free</dt>
+                                    <dd>Zero cost but with some ads</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Personal</dt>
+                                    <dd>$10 per month without ads</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>Family</dt>
+                                    <dd>$15 per month without ads</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <div class="" style="text-align: center">
+                            <img style="border-radius: 10px;" src="/Assets/music.jpg" width="500px" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

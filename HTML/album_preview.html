@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Preview Page</title>
+
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        nav li{
+            float: left;
+            border-radius: 10px;
+        }
+
+        nav li a {
+            display: block;
+            padding: 8px;
+            color: #666;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            border-radius: 10px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-image: url("/Assets/Wallpaper.jpg");
+            height: 100vh;
+        }
+
+        .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li style="background-color: #f3f3f3;"><a href="/HTML/profile.html">Profile</a></li>
+            <li style="background-color: #f3f3f3; margin-left: 5px; margin-right: 5px;"><a href="/HTML/song_listing.html">Song Listing</a></li>
+            <li class="active"><a href="/HTML/album_preview.html" style="color: white;">Album Preview</a></li>
+            <li style="float: right; background-color: #f3f3f3;"><a href="/index.html">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container" style="justify-content: space-around;">
+            <div class="row">
+                <div class="column">
+                    <div class="info" style="width: 1000px; padding: 20px; margin-top: 100px; margin-bottom: 20px; display: flex; justify-content: space-around;">
+                        <div class="row" style="padding: 10px; margin-left: 20px;">
+                            <div class="">
+                                <h1 style="margin-top: 0px; margin-bottom: 5px">Reputation</h1>
+                            </div>
+                            <div class="info" style="padding: 5px;">
+                                <p style="margin-bottom: 0px; margin-top: 0px;">&emsp;<strong>Reputation</strong> is the sixth studio album by American singer-songwriter Taylor Swift. It was released on November 10, 2017, and was her last album under Big Machine Records. Swift conceived the album during her self-seclusion from public appearances as an effect of the rampant tabloid scrutiny on her private life and celebrity after her fifth studio album, 1989.</p>
+                            </div>
+
+                            <div class="" style="display: flex; justify-content: space-between; margin-top: 10px;">
+                                <div class="">
+                                    <p style="margin-top: 2px; margin-bottom: 0px;">Here is the details.</p>
+                                    <dl style="margin-top: 3px; margin-bottom: 3px;">
+                                        <dt>Name</dt>
+                                        <dd>Taylor Swift</dd>
+                                        <dt>Realease Date</dt>
+                                        <dd>November 10, 2017</dd>
+                                        <dt>Origin</dt>
+                                        <dd>America</dd>
+                                    </dl>
+                                </div>
+
+                                <div class="info" style="padding: 5px; width: fit-content;">
+                                    <p style="margin-top: 2px; margin-bottom: 0px;">She also has another album with her song</p>
+                                    <ul style="margin-top: 0px;">
+                                        <li>Taylor Swift 
+                                            <ol>
+                                                <li>Tim McGraw</li>
+                                                <li>Picture To Burn</li>
+                                            </ol>
+                                        </li>
+                                        <li>Fearless
+                                            <ol>
+                                                <li>Fearless</li>
+                                                <li>Fifteen</li>
+                                            </ol>
+                                        </li>
+                                        <li>Speak Now
+                                            <ol>
+                                                <li>Mine</li>
+                                                <li>Sparks fly</li>
+                                            </ol>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                                <div class="info" style="padding: 5px; width: fit-content;">
+                                    <p style="margin-top: 2px; margin-bottom: 0px;">Here is the list of the songs.</p>
+                                    <ol style="margin-top: 0px;">
+                                        <li>... Ready for it</li>
+                                        <li>End Game</li>
+                                        <li>I Did Something Bad</li>
+                                        <li>Don't blame me</li>
+                                        <li>Delicate</li>
+                                    </ol>
+                                </div>
+                                <div class="column">
+                                    <h1 style="margin-top: 10px; margin-bottom: 0px;">You can buy <strong>Reputation</strong> Album for $40 <a href="">Click Here</a></h1>
+                                </div>
+                            </div>
+                        <div class="" style="text-align: center;">
+                            <img src="/Assets/album.png" height="400px" alt="" style="border-radius: 10px;">
+                            <p style="margin-top: 2px; margin-bottom: 3px;">Here is one of her song</p>
+                            <audio controls controlsList="nodownload" src="/Assets/love_story.mp3" style="margin-left: 5px;" type="audio/mp3">
+                                Your browser doesn't support audio files.
+                              </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

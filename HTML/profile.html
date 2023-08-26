@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <style>
+
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        nav li{
+            float: left;
+            border-radius: 10px;
+        }
+
+        nav li a {
+            display: block;
+            padding: 8px;
+            color: #666;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            border-radius: 10px;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-image: url("/Assets/Wallpaper.jpg");
+            height: 100vh;
+        }
+
+        .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="active"><a href="/HTML/profile.html" style="color: white;">Profile</a></li>
+            <li style="background-color: #f3f3f3; margin-left: 5px; margin-right: 5px;"><a href="/HTML/song_listing.html">Song Listing</a></li>
+            <li style="background-color: #f3f3f3;"><a href="/HTML/album_preview.html">Album Preview</a></li>
+            <li style="float: right; background-color: #f3f3f3;"><a href="/index.html">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container" style="justify-content: space-around;">
+            <div class="row">
+                <div class="info" style="width: 1000px; padding: 20px; margin-top: 100px; display: flex; justify-content: space-around;">
+                    <img src="/Assets/profile.jpg" width="400px" alt="" style="border-radius: 10px;">
+                    <div class="row" style="padding: 10px; margin-left: 20px;">
+                        <div class="" style="text-align: center;">
+                            <h1 style="margin-top: 0px; margin-bottom: 5px ; text-align: center;">Fajar Haqqy Ashbahanie</h1>
+                            <em style="text-align: center;">Junior Web Developer</em>
+                        </div>
+                        <p>&emsp;&emsp;I am an avid <ins>web development</ins>  enthusiast deeply fascinated by <ins>technology</ins>. Exploring the dynamic world of web development has ignited a passion within me to create innovative &amp; user-centric digital experiences. My journey has led me to master various programming languages, front-end frameworks, &amp; back-end technologies. Continuously learning &amp; adapting to the ever-evolving tech landscape, I relish the challenge of solving complex problems through coding &amp; design.</p>
+                        <p>I have few experience on these topics : </p>
+                        <ul style="list-style-type:square;">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Laravel</li>
+                            <li>Bootstrap</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
