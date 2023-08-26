@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" style="box-sizing: border-box;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+        }
+
+        nav ul {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            margin-left: 38%;
+        }
+
+        nav li{
+            float: left;
+            border-radius: 10px;
+            background-color: #f3f3f3; 
+            margin-right: 5px;
+        }
+
+        nav li a {
+            display: block;
+            padding: 8px;
+            color: #666;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav li a:hover {
+            background-color: #111;
+            border-radius: 10px;
+            color: white;
+        }
+
+        nav ul .active {
+            background-color: #04AA6D;
+        }
+
+        nav ul .active a {
+            color: white;
+        }
+
+        .container {
+            justify-content: center; display: flex; 
+            height: 100vh; 
+            background-image: url("../Asset/Wallpaper.jpg");
+        }
+
+        .info {
+            width: 90vw; 
+            padding: 20px; 
+            margin-top: 80px; 
+            display: flex; 
+            justify-content: space-between;
+             color: rgb(38, 38, 38); 
+            background: rgba(255, 255, 255, 0.25); 
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: 10px;
+            border-radius: 10px;  
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .tabstyle {
+            width: 400px;
+        }
+
+        .tabstyle table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+
+        .hobby table tr:nth-child(1){
+            background-color: green;
+            color: white;
+        }
+
+        .movie table tr:nth-child(2){
+            background-color: red;
+            color: white;
+        }
+
+        .song table tr:nth-child(3){
+            background-color: blue;
+            color: white;
+        }
+
+        .row .info .tabstyle p {
+            text-align: center;
+            font-size: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            margin-top: 0px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li ><a href="../Project_1/index.html">Project 1</a></li>
+            <li class="active"><a href="index.html">Project 2</a></li>
+            <li ><a href="../Project_3/index.html">Project 3</a></li>
+            <li ><a href="../Project_4/index.html">Project 4</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="info">
+                    <div class="tabstyle hobby">
+                        <p>Table of Hobby</p>
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Learning Web Programming</td>
+                                <td>Web programming is like building and designing things on the internet. It's how we make websites do stuff, look good, and let people do things on them, like clicking buttons and filling forms.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Playing chess</td>
+                                <td>Chess is a game where you move pieces on a board to capture the other player's king. Each piece moves in a special way, and the winner is the one who captures the king first. It's like a strategic battle on a checkered battlefield.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Waching Movies</td>
+                                <td>Watching movies is like stepping into another world, where stories come to life on the screen and emotions unfold before our eyes.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Learning Artificial Intelligence</td>
+                                <td>Artificial intelligence is the creation of smart computers that can think and learn, helping them do tasks that usually require human intelligence.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Talking on discord</td>
+                                <td>Talking on Discord is like having a virtual conversation with friends using voice and text, connecting people across distances in real time.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tabstyle movie">
+                        <p>Table of Favorite Movies</p>
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Interstellar</td>
+                                <td>&quot;Interstellar&quot; is a science fiction movie that takes viewers on a thrilling journey through space and time as astronauts venture to save humanity by exploring distant planets.</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Tennet</td>
+                                <td>&quot;Tenet&quot; is a mind-bending action thriller that delves into the world of time inversion, where an agent fights to prevent a global catastrophe with time-altering technology.</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Oppenheimer</td>
+                                <td>&quot;Oppenheimer&quot; is an upcoming biographical drama film focusing on J. Robert Oppenheimer, the physicist who played a pivotal role in the development of the atomic bomb during World War II.</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Forget Me Not</td>
+                                <td>&quot;Forget Me Not&quot; is a poignant and evocative story that follows the journey of two individuals as they navigate the complexities of memory, love, and life's fleeting moments.</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Your Name</td>
+                                <td>&quot;Your Name&quot; is a captivating animated film that intertwines the lives of two strangers who inexplicably swap bodies, leading to a heartwarming and transcendent connection across time and space.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="tabstyle song">
+                        <p>Table of Favorite Song</p>
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Year</th>
+                                <th>Artist</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>History</td>
+                                <td>2018</td>
+                                <td>Rich Brian</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kid</td>
+                                <td>2019</td>
+                                <td>Rich Brian</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Every Summertime</td>
+                                <td>2021</td>
+                                <td>NIKI</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Slow Dancing In The Dark</td>
+                                <td>2018</td>
+                                <td>Joji</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Sumemrtime Sadness</td>
+                                <td>2012</td>
+                                <td>Lana Del Rey</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

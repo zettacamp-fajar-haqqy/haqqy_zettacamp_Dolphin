@@ -1,0 +1,123 @@
+* {
+box-sizing: border-box;
+font-family: 'Inter', sans-serif;
+color: #4d4ae8;;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+nav ul {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0 0 0 38%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+nav li{
+    float: left;
+    border-radius: 10px;
+    background-color: #f3f3f3; 
+    margin: 0 5px 0 0;
+}
+
+nav li a {
+    display: block;
+    padding: 8px;
+    color: #666;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: serif;
+}
+
+nav li a:hover {
+    background-color: #111;
+    border-radius: 10px;
+}
+
+nav ul .active {
+    background-color: #04AA6D;
+}
+
+nav ul .active a {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    background-image: url("../Asset/Wallpaper.jpg");
+    height: 100vh;
+}
+
+.info {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 1000px; 
+    padding: 10px; 
+    margin: 80px 0 0;
+
+    display: flex; 
+    justify-content: space-around;
+}
+
+.card {
+    color: rgb(38,38,38);
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    width: 200px;
+    margin: 20px 0 0;
+    padding: 0px;
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.row .info .row {
+    padding: 10px;
+}
+
+.row .info .row .myname {
+    text-align: center;
+}
+
+.row .info .row .myname h1{
+    margin: 0px 0px 5px;
+}
+
+.info .row p {
+    text-align: justify;
+}
+
+.info .row p:last-child {
+    margin: 5px 0px 0px;
+}
+
+.manga {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.card .row p {
+    padding: 5px;
+    margin: 0px 0px 3px 0px;
+}
+
+.card .row p:last-child {
+    font-size: 13px;
+    text-align: justify;
+}
