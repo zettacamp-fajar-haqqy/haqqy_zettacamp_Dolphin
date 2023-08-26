@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping</title>
+
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+      .column {
+        padding: 10px;
+      }
+
+      .left {
+        float: left;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        background-image: url("Wallpaper.jpg");
+      }
+
+      .left .details {
+        display: inline-block;
+      }
+
+      .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+
+      .left .hobbies, .social {
+        display: flex;
+        justify-content: left;
+      }
+
+
+      .right {
+        float: right;
+        width: 79%;
+        background-image: url("Wallpaper2.jpg");
+      }
+
+      .right .school {
+        display: flex;
+        justify-content: left;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding-left: 5px;
+      }
+
+      .spaced {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left card">
+        <div class="profile">
+          <img src="waifu.jpg" alt="Photo" srcset="" height="200px" style="border-radius: 50%; margin-left: 15px;">
+
+          <br>
+          <br>
+          
+            <div class="info">
+                <h2 style="margin: 10px; margin-left: 2px;">Shopping Note</h2>
+                <hr>
+
+                <dl>
+                    <dt>Apple</dt>
+                    <dd>You should buy 4 kg of apples</dd>
+                    <dd>Make sure it's China's apple</dd>
+                    <dt>Date</dt>
+                    <dd>You should buy 5 kg of dates</dd>
+                    <dd>The dates should be from Saudi Arabia</dd>
+                    <dt>Elderberry</dt>
+                    <dd>Buy some if you want, but not that important</dd>
+                </dl>
+
+                <br>
+            </div>
+
+          <br>
+
+        </div>
+      </div>
+
+      <div class="column right card">
+        <div class="info">
+          <h1 style="margin-left: 5px;">Fajar Haqqy Ashbahanie</h1>
+          <h3 style="margin-left: 5px;">Junior Website Developer</h3>
+        </div>
+
+        <br>
+
+        <div class="info">
+          
+          <h2 style="margin: 10px; margin-left: 7px;">Shopping List</h2>
+          <p style="margin: 10px; margin-left: 7px;"><ins>Price and Total is on kg</ins></p>
+          <hr>
+          <table style="width: 100%;">
+            <tr>
+              <th style="width: 160px;">Item</th>
+              <th style="width: 600px;">Description</th>
+              <th>Price</th>
+              <th style="width: 150px;">Total Item</th>
+              <th>Total Price</th>
+            </tr>
+            <tr>
+              <td style="padding: 5px;"><img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" width="150px" alt=""></td>
+              <td>Please choose apple from the country according to your taste.     
+                <ul>
+                    <li>China</li>
+                    <ul>
+                        <li>Beijing</li>
+                        <li>Shanghai</li>
+                    </ul>
+                    <li>Italy</li>
+                    <li>United States</li>
+                </ul>
+              </td>
+              <td class="spaced">$1.50 to $3.00</td>
+              <td class="spaced">4</td>
+              <td class="spaced">$6 to $12</td>
+            </tr>
+            <tr>
+              <td style="padding: 5px;"><img src="https://images.unsplash.com/reserve/RNm0KceQ4Gbpb0xldOe7_DSC_0679_2.JPG?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=814&q=80" width="150px" alt=""></td>
+              <td>Please choose banana from the country according to your taste.     
+                <ul>
+                    <li>Ecuador</li>
+                    <li>Phillipines</li>
+                    <li>Guatemala</li>
+                </ul>
+              </td>
+              <td class="spaced">$1.95 to $3.55</td>
+              <td class="spaced">0</td>
+              <td class="spaced">-</td>
+            </tr>
+            <tr>
+              <td style="padding: 5px;"><img src="https://images.unsplash.com/photo-1530176611600-d05a6387d07c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" width="150px" alt=""></td>
+              <td>Please choose cherry from the country according to your taste.
+                <dl>
+                    <dt> </dt>
+                    <dd>Sorry for now our cherry is only from <strong>China</strong></dd>
+                </dl>
+              </td>
+              <td class="spaced">$2.25 to $3.23</td>
+              <td class="spaced">0</td>
+              <td class="spaced">-</td>
+            </tr>
+            <tr>
+              <td style="padding: 5px;"><img src="https://images.unsplash.com/photo-1614061811858-dde54a522f5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" width="150px" alt=""></td>
+              <td>Please choose date from the country according to your taste.     
+                <ul>
+                    <li>United Arab Emirates</li>
+                    <li>Tunisia</li>
+                    <li>Saudi Arabia</li>
+                </ul>
+              </td>
+              <td class="spaced">$1.64 to $3.50</td>
+              <td class="spaced">5</td>
+              <td class="spaced">$8.2 to $17.5 </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px;"><img src="https://images.unsplash.com/photo-1661896265359-a7eef1d01125?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" width="150px" alt=""></td>
+              <td>Please choose elderberry from the country according to your taste.     
+                <ul>
+                    <li>Germany</li>
+                    <li>Austria</li>
+                    <li>Canada</li>
+                </ul>
+              </td>
+              <td class="spaced">$3.75 to $5.00</td>
+              <td class="spaced">2</td>
+              <td class="spaced">$7.5 to $10.00 </td>
+            </tr>
+            <tr>
+              <td style="padding: 5px;"><img src="https://images.unsplash.com/photo-1600790065707-d3a69f72e831?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80" width="150px" alt=""> </td>
+              <td>Please choose fig from the country according to your taste.     
+                <ul>
+                    <li>Turkey</li>
+                    <li>Afghanistan</li>
+                    <li>Austria</li>
+                </ul>
+              </td>
+              <td class="spaced">$2.05 to $2.85</td>
+              <td class="spaced">0</td>
+              <td class="spaced">-</td>
+            </tr>
+            <tr>
+                <th colspan="4" class="centered">Total</th>
+                <th class="spaced">$21.7 to $39.5</th>
+            </tr>
+          </table>
+        </div>
+
+        <br>
+
+      </div>
+
+    </div>    
+    
+    </body>
+    </html>

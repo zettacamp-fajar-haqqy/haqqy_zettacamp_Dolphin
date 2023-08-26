@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+      .column {
+        padding: 10px;
+      }
+
+      .left {
+        float: left;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        background-image: url("Wallpaper.jpg");
+      }
+
+      .left .details {
+        display: inline-block;
+      }
+
+      .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+
+      .left .hobbies, .social {
+        display: flex;
+        justify-content: left;
+      }
+
+
+      .right {
+        float: right;
+        width: 79%;
+        background-image: url("Wallpaper2.jpg");
+      }
+
+      .right .school {
+        display: flex;
+        justify-content: left;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding-left: 5px;
+      }
+
+      .spaced {
+        text-align: center;
+        vertical-align: middle;
+      }
+
+    </style>
+
+    <script type="text/JavaScript">
+      function showInput(){
+        event.preventDefault();
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        if(document.getElementById("male").checked){
+          var gender = document.getElementById("male").value
+        } else if (document.getElementById("female").checked){
+          var gender = document.getElementById("female").value
+        } else {
+          var gender = document.getElementById("other").value
+        }
+        var email = document.getElementById("email").value;
+        var telephone = document.getElementById("telephone").value;
+        var age = document.getElementById("age").value;
+        var link = document.getElementById("link").value;
+        var review = document.getElementById("review").value;
+
+        
+
+        display_name.innerHTML = fname + ' ' + lname;
+        display_gender.innerHTML = gender;
+        display_email.innerHTML = email;
+        display_telephone.innerHTML = telephone;
+        display_age.innerHTML = age;
+        display_link.innerHTML = link;
+        display_review.innerHTML = review;
+
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left card">
+        <div class="profile">
+          <img src="waifu.jpg" alt="Photo" srcset="" height="200px" style="border-radius: 50%; margin-left: 15px;">
+
+          <br>
+          <br>
+          
+            <div class="info">
+
+                <h2 style="margin: 10px; margin-left: 2px;">Please fill this form.</h2>
+                <hr>
+
+                <form>
+                  <label for="fname">First Name :</label><br>
+                  <input type="text" id="fname" name="fname" placeholder="Input your first name" autofocus><br>
+
+                  <label for="lname">Last Name :</label><br>
+                  <input type="text" id="lname" name="lname" placeholder="Input your last name"><br>
+
+                  <p style="margin-top: 3px; margin-bottom: 3px;">Select Your Gender</p>
+                  <input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label><br>
+                  <input type="radio" id="female" name="gender" value="female">
+                  <label for="female">Female</label><br>
+                  <input type="radio" id="other" name="gender" value="other">
+                  <label for="other">Other</label><br>
+
+                  <label for="email">Email :</label><br>
+                  <input type="email" id="email" name="email" placeholder="Input your email"><br>
+
+                  <label for="telephone">Telephone :</label><br>
+                  <input type="text" id="telephone" name="telephone" placeholder="Input your phone number"><br>
+
+                  <label for="age">Age :</label><br>
+                  <input type="number" min="0" id="age" name="age" placeholder="How old are you?"><br>
+
+                  <label for="link">Link :</label><br>
+                  <input type="url" id="link" name="link" placeholder="Input url of something"><br>
+
+                  <label for="password">Password :</label><br>
+                  <input type="password" id="password" name="password" placeholder="Input your password"><br>
+
+                  <p>Last but not least, give me your opinion about this form</p>
+                  <label for="review">Review of this form</label><br>
+                  <textarea name="review" id="review" cols="30" rows="10"></textarea>
+
+                  <input type="submit" onclick="showInput()" value="submit">
+
+                </form>
+
+                <br>
+
+            </div>
+
+          <br>
+
+        </div>
+      </div>
+
+      <div class="column right card">
+        <div class="info">
+          <h1 style="margin-left: 5px;">Fajar Haqqy Ashbahanie</h1>
+          <h3 style="margin-left: 5px;">Junior Website Developer</h3>
+        </div>
+
+        <br>
+
+        <div class="info">
+          
+          <h2 style="margin: 10px; margin-left: 7px;">Introduce yourself</h2>
+          <hr>
+
+          <p style="margin: 10px; margin-left: 7px;">Hello there! My name is <ins><span id="display_name"></span></ins>, and I am delighted to introduce myself. I identify as <ins><span id="display_gender"></span></ins>, and you can reach me at <ins><span id="display_email"></span></ins> or give me a call at <ins><span id="display_telephone"></span></ins>. At <ins><span id="display_age"></span></ins> years old, I have been fortunate to embark on various journeys. If you'd like to know more about me, you can visit my website at <ins><span id="display_link"></span></ins>. Last, I would tell you something which is 	&quot;<strong><span id="display_review"></span></strong>&quot;.
+          </p>
+
+          <!-- <p style="margin: 10px; margin-left: 7px;">Your name is : <span id="display_name"></span></p>
+          <p style="margin: 10px; margin-left: 7px;">Your gender is : <span id="display_gender"></span></p>
+          <p style="margin: 10px; margin-left: 7px;">Your email is : <span id="display_email"></span></p>
+          <p style="margin: 10px; margin-left: 7px;">Your telephone is : <span id="display_telephone"></span></p>
+          <p style="margin: 10px; margin-left: 7px;">Your age is : <span id="display_age"></span></p>
+          <p style="margin: 10px; margin-left: 7px;">Your link is : <span id="display_link"></span></p>
+          <p style="margin: 10px; margin-left: 7px;">Your review is : <span id="display_review"></span></p> -->
+          
+        </div>
+
+        <br>
+
+      </div>
+
+    </div>    
+    
+    </body>
+    </html>

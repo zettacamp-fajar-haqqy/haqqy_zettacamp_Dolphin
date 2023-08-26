@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML JavaScript output on same page</title>
+    <script type="text/JavaScript">
+        function showMessage(){
+            var message = document.getElementById("message").value;
+            display_message.innerHTML= message;
+        }
+    </script>
+</head>
+<body>
+<form>
+Enter message: <input type="text" id = "message">
+<input type="button" onclick="showMessage()" value="submit" />
+</form>
+<p> Message is: <span id = "display_message"></span> </p>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile with a bit improvement</title>
+
+    <style>
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        border-radius: 10px;
+      }
+
+      .column {
+        padding: 10px;
+      }
+
+      .left {
+        float: left;
+        display: flex;
+        width: 20%;
+        justify-content: center;
+        background-image: url("Wallpaper.jpg");
+      }
+
+      .left ul {
+        list-style: none;
+      }
+
+      .left .details {
+        display: inline-block;
+      }
+
+      .info {
+        color: rgb(38,38,38);
+        padding: 3px;
+        background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 10px );
+        -webkit-backdrop-filter: blur( 10px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+
+      .left .hobbies, .social {
+        display: flex;
+        justify-content: left;
+      }
+
+
+      .right {
+        float: right;
+        width: 79%;
+        background-image: url("Wallpaper2.jpg");
+      }
+
+      .right .school {
+        display: flex;
+        justify-content: left;
+      }
+
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      td {
+        padding-left: 5px;
+      }
+
+      footer{
+        background-color: rebeccapurple;
+        position: relative;
+        margin-top: 10px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left card">
+        <div class="profile">
+          <img src="waifu.jpg" alt="Photo" srcset="" height="200px" style="border-radius: 50%; margin-left: 15px;">
+
+          <br>
+          <br>
+          
+          <div class="info">
+            <h2 style="margin: 10px; margin-left: 2px;">Info</h2>
+            <hr>
+            <div class="row">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Black_-_replace_this_image_male.svg/200px-Black_-_replace_this_image_male.svg.png?20100120132708" alt="" height="40px" style="border-radius: 50%;">
+              <div class="details">
+                <h4 style="margin: 0;">Date of Birth</h4>
+                <p style="margin-top: 5px; margin-bottom: 0px;">3 August 2023</p>
+              </div>
+            </div>
+            
+            <br>
+  
+            <div class="row">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Location_pin_icon.svg/640px-Location_pin_icon.svg.png" alt="" height="40px" style="border-radius: 50%; margin-left: 4px;">
+              <div class="details" style="margin-left: 4px;">
+                <h4 style="margin: 0;">Address</h4>
+                <p style="margin-top: 5px; margin-bottom: 0px;">Trenggalek, East Java</p>
+              </div>
+            </div>
+            
+            <br>
+  
+            <div class="row">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Phone_b.png/640px-Phone_b.png" alt="" height="40px" style="border-radius: 50%; margin-left: 4px;"">
+              <div class="details">
+                <h4 style="margin: 0;">Phone</h4>
+                <p style="margin-top: 5px; margin-bottom: 0px;">+62 85 749 610 XXX</p>
+              </div>
+            </div>
+            
+            <br>
+  
+            <div class="row">
+              <img src="https://freesvg.org/img/Mail-Icon-White-on-Black.png" alt="" height="40px" style="border-radius: 50%;">
+              <div class="details">
+                <h4 style="margin: 0;">Email</h4>
+                <p style="margin-top: 5px; margin-bottom: 0px;">fajar.haqqy@zettacamp.pro</p>
+              </div>
+            </div>
+          <br>
+          </div>
+
+          <br>
+
+          <div class="info">
+
+            <h2 style="margin: 10px; margin-left: 2px;">Interest</h2>
+            <hr>
+
+            <div class="row hobbies">
+              <img src="https://static.thenounproject.com/png/246821-200.png" alt="" height="40px" style="border-radius: 50%;">
+                <h4 style="margin-left: 5px; margin-top: 10px;">Web Development</h4>
+            </div>
+            
+            <br>
+
+            <div class="row hobbies">
+              <img src="https://freesvg.org/img/Mental-health-icon.png" alt="" height="40px" style="border-radius: 50%;">
+                <h4 style="margin-left: 5px; margin-top: 10px;">Artificial Intelligence</h4>
+            </div>
+            
+            <br>
+
+            <div class="row hobbies">
+              <img src="https://www.svgrepo.com/show/125004/chess-horse.svg" alt="" height="40px" style="border-radius: 50%;"">
+                <h4 style="margin-left: 5px; margin-top: 10px;">Chess</h4>
+            </div>
+            
+            <br>
+
+            <div class="row hobbies">
+              <img src="https://freesvg.org/img/controller-icon.png" alt="" height="40px" style="border-radius: 50%;">
+                <h4 style="margin-left: 5px; margin-top: 10px;">Playing Video Games</h4>
+            </div>
+
+          </div>
+
+          <br>
+
+          <div class="info">
+            <h2 style="margin: 10px; margin-left: 0;">Socials</h2>
+              <hr>
+              <div class="social" style="justify-content:space-around;">
+                <a href="https://github.com/zettacamp-fajar-haqqy" title="Here is where I put my project on."><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" srcset="" height="50px" style="border-radius: 50%;"></a>
+            
+                <a href="https://www.linkedin.com/in/fajar-haqqy-ashbahanie" title="We can be friend, let's connect with LinkedIn!"><img src="https://www.svgrepo.com/download/922/linkedin.svg" alt="LinkedIn" srcset="" height="50px" style="border-radius: 50%;"></a>
+            
+                <a href="https://www.twitter.com/hakiash" title="Sometimes I check twitter for fun."><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_logo_2023.svg/512px-X_logo_2023.svg.png?20230728154250" alt="X" srcset="" height="50px" style="border-radius: 50%;"></a>
+              </div>
+          </div>
+
+          <br>
+
+          <div class="info">
+            <h3 style="margin: 10px; margin-left: 0;">Let's watch something</h3>
+              <hr>
+
+            <iframe width="200" src="https://www.youtube.com/embed/ApqxheQIGD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin: 10px;"></iframe>
+
+            <!-- <iframe width="200" src="https://www.youtube.com/embed/rMq-GocjDqY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin: 10px;"></iframe> -->
+            <!-- <iframe width="200" src="https://www.youtube.com/embed/13ARO0HDZsQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="margin: 10px;"></iframe> -->
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="column right card">
+        <div class="info">
+          <h1 style="margin-left: 5px;">Fajar Haqqy Ashbahanie</h1>
+          <h3 style="margin-left: 5px;">Junior Website Developer</h3>
+        </div>
+
+        <br>
+
+        <div class="info">
+          
+          <h2 style="margin: 10px; margin-left: 7px;">About Me</h2>
+          <hr>
+          <p style="margin: 10px;">&emsp;I am an avid <ins>web development</ins>  enthusiast deeply fascinated by <ins>technology</ins>. Exploring the dynamic world of web development has ignited a passion within me to create innovative &amp; user-centric digital experiences. My journey has led me to master various programming languages, front-end frameworks, &amp; back-end technologies. Continuously learning &amp; adapting to the ever-evolving tech landscape, I relish the challenge of solving complex problems through coding &amp; design. With an eye for detail &amp; a dedication to quality, I strive to build seamless &amp; interactive websites that leave a lasting impression on users. Beyond the technical aspects, I also appreciate the art of crafting aesthetically pleasing interfaces. My goal is to contribute my skills &amp; creativity to impactful projects, making a difference in the digital realm &amp; shaping the future of web development.
+          <br>
+          <strong><code>Text above is generated by ChatGPT, if you dont want to read you can listen by clicking this button below.</code></strong>
+          </p>
+
+          <audio controls controlsList="nodownload" src="About me.mp3" style="margin-left: 5px;" type="audio/mp3">
+            Your browser doesn't support audio files.
+          </audio>
+
+          <p style="margin: 10px;"><strong><code>Or you can enjoy the video created by AI.</code></strong></p>
+
+          <video width="400px" controls controlsList="nodownload" style="margin-left: 5px;">
+            <source src="about-me.mp4" type="video/mp4">
+            Your browser doesn't support the latest web standards.
+          </video>
+        </div>
+
+        <br>
+        
+        <div class="info">
+          <h2 style="margin: 10px; margin-left: 7px;">Education</h2>
+          <hr>
+
+          <div class="row school">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkP6_U2FuPVVedZk-jKDrGBvwHkZRuQ4PbWqvMfqrGoq503ZkpdD2_r-6PWYjPZ7VAQnA&usqp=CAU" alt="" height="40px" style="border-radius: 50%;">
+              <h4 style="margin-left: 5px; margin-top: 10px;">2017-2022 Universitas Muhammadiyah Malang</h4>
+          </div>
+          
+          <br>
+
+          <div class="row school">
+            <img src="https://www.svgrepo.com/show/181865/school-school.svg" alt="" height="40px" style="border-radius: 50%;">
+              <h4 style="margin-left: 5px; margin-top: 10px;">2014-2017 MAN 2 Tulungagung</h4>
+          </div>
+          
+          <br>
+
+          <div class="row school">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1rCealHIdMtYzkBvT218OqHHs4N194pV9Xg&usqp=CAU" alt="" height="40px" style="border-radius: 50%;"">
+              <h4 style="margin-left: 5px; margin-top: 10px;">2011-2014 MTsN 1 Tulungagung</h4>
+          </div>
+  
+          <br>
+          
+        </div>
+
+        <br>
+
+        <div class="info">
+          <h2 style="margin: 10px; margin-left: 7px;">I have a little experience on</h2>
+          <hr>
+
+          <div style="padding: 5px;">
+
+            <table style="width: 100%;">
+              <tr>
+                <th rowspan="2">Skill</th>
+                <th colspan="5">Level</th>
+              </tr>
+              <tr style="text-align:center;">
+                <td>Novice</td>
+                <td>Competence</td>
+                <td>Proficiency</td>
+                <td>Expertise</td>
+                <td>Mastery</td>
+              </tr>
+              <tr>
+                <td>HTML</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td><img src="https://cdn-icons-png.flaticon.com/512/5290/5290982.png" height="30px" alt=""> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>CSS</td>
+                <td> </td>
+                <td> </td>
+                <td><img src="https://cdn-icons-png.flaticon.com/512/5290/5290982.png" height="30px" alt=""> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Javascript</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td><img src="https://cdn-icons-png.flaticon.com/512/5290/5290982.png" height="30px" alt=""> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Bootstrap</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td><img src="https://cdn-icons-png.flaticon.com/512/5290/5290982.png" height="30px" alt=""> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Laravel</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td><img src="https://cdn-icons-png.flaticon.com/512/5290/5290982.png" height="30px" alt=""> </td>
+                <td> </td>
+              </tr>
+              <tr>
+                <td>Mysql</td>
+                <td> </td>
+                <td> </td>
+                <td><img src="https://cdn-icons-png.flaticon.com/512/5290/5290982.png" height="30px" alt=""> </td>
+                <td> </td>
+                <td> </td>
+              </tr>
+            </table>
+          </div>
+          
+        </div>
+  
+        <br>
+
+      </div>
+
+    </div>
+
+    </body>
+    </html>
