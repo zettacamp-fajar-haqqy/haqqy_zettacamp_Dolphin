@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <script type="text/Javascript">
+        function showInput(){
+            event.preventDefault();
+            var title = document.getElementById("title").value;
+            var price = document.getElementById("price").value;
+            var description = document.getElementById("description").value;
+
+            display_title.innerHTML = title;
+            display_price.innerHTML = price;
+            display_description.innerHTML = description;
+
+        }
+
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+
+    </script>
+
+</head>
+<body>
+    <div class="container full">
+
+        <div class="header">
+            <div class="left">
+                <a href="/index.html">
+                    <img src="/assets/icon.png" height="70px" alt="">
+                </a>
+            </div>
+            <div class="middle">
+                <div class="search-bar">
+                    <form action="">
+                        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Type Something ...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <ul class="mini-menu">
+                    <li>iPhone 14 Pro Max</li>
+                    <li>Hoodie</li>
+                    <li>Macbook Air</li>
+                    <li>Samsung S23 Ultra</li>
+                    <li>Shoes</li>
+                    <li>Smart Watch</li>
+                    <li>Ticket</li>
+                    <li>Vouchers</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img class="flip" src="/assets/cart.png" height="40px" alt="">
+            </div>
+        </div>
+
+        <div class="box middle-box">
+            <div class="form">
+                <div class="add">
+                    <form action="" class="form-input">
+                        <div class="text-input">
+                            <label for="title">Title : </label><br>
+                            <input type="text" name="title" id="title"><br>
+                        </div>
+                        <div class="text-input">
+                            <label for="price">Price : </label><br>
+                            <input type="text" name="price" id="price"><br>
+                        </div>
+                        <div class="text-input">
+                            <label for="description">Description : </label><br>
+                            <input type="text" name="description" id="description"><br>
+                        </div>
+                        <div class="img-input">
+                            <p><label for="file">Upload Image : </label></p>
+                            <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></p>
+                        </div>
+                        <input class="submit" type="submit" onclick="showInput()" value="submit">
+                    </form>
+                </div>
+            </div>
+
+            <div class="status-item">
+                <h1>Added Item</h1>
+            </div>
+
+            <div class="add-products">
+
+                <div class="item">
+                    <a href="" style="text-decoration: none;">
+                        <img id="output" src="" width="352" height="170" alt="Upload an Image First">
+                        <p class="item-title"><span id="display_title"></span></p>
+                        <p class="item-description"><span id="display_description"></span></p>
+                        <div class="price">
+                            <p ><span>$</span><span id="display_price" class="item-price"></span></p>
+                            <p class="item-sold">500+ Sold</p>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="footer stay-bot">
+            <h1>Happy me, happy tummy</h1>
+        </div>
+
+    </div>
+</body>
+</html>

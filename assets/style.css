@@ -1,0 +1,461 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url("/assets/wallpaper.jpg");
+    height: 100vh;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(38, 38, 38);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+.header .left {
+    width: 20vw;
+}
+
+.header .right {
+    width: 10vw;
+}
+
+.header .middle {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-right: 9rem;
+}
+
+.header .middle .search-bar {
+    text-align: center;
+}
+
+.header .middle .search-bar input[type=text] {
+    padding: 0.37 0;
+    margin-top: 0.3rem;
+    border: none;
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 10px;
+}
+
+.header .middle .search-bar button {
+    padding: 0.37 0;
+    width: 7%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header .middle .mini-menu {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-evenly;
+   padding: 0px;
+   margin: 0.7rem 1rem 0.3rem 0.3rem;
+}
+
+.header .middle .mini-menu li {
+    font-size: small;
+    cursor: pointer;
+}
+
+.header .middle .mini-menu li:hover {
+    color: orangered;
+}
+
+.flip {
+    transform: scaleX(-1);
+    margin-top: 1rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+/* STYLE UNTUK INDEX */
+
+.section {
+    margin-top: 7rem;
+    margin-bottom: 0.75rem;
+    width: 80%;
+    height: 35rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+}
+
+.top-section {
+    display: flex; 
+    justify-content: center;
+    margin: 1.5rem 0 2rem 0;
+    padding: 5px;
+}
+
+.top-section p {
+    text-align: center;
+    width: 70%;
+    margin: 0;
+}
+
+.bot-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 5rem;
+}
+
+.bot-section ul {
+    list-style-type: none; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    height: 20rem; 
+    width: 15rem;
+    font-size: x-large;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bot-section ul li {
+    padding: 0;
+}
+
+.bot-section ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.bot-section ul li a:hover {
+    font-size: larger;
+    color: green;
+}
+
+.bot-section video {
+    border-radius: 10px;
+}
+
+/* STYLE UNTUK SHOPPING LIST */
+
+.full {
+    height: max-content;
+}
+
+.add-item-btn {
+    text-decoration: none;
+}
+
+.add-item {
+    position: sticky;
+    top: 7rem;
+    left: 90%;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    width: max-content;
+    transition: transform .2s;
+}
+.add-item:hover {
+    transform: scale(1.05);
+}
+
+.products {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 72rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    top: 0;
+    flex-basis: 22rem;
+    height: 21.5rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+}
+
+.item:hover {
+    top: -10px;
+    border: 2px solid white;
+}
+
+.item img {
+    border-radius: 10px 10px 0 0;
+}
+
+.item-title {
+    margin: 0.3rem 0;
+    font-size: 1.2rem;
+    color: black;
+    text-align: center;
+}
+
+.item-description {
+    margin: 0.3rem 0.6rem;
+    color: black;
+    text-align: center;
+    height: 4.5rem;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.6rem;
+}
+
+.item-price {
+    margin: 0;
+    color: black;
+    font-size: 1.4rem;
+}
+
+.item-price span {
+    font-size: small;
+}
+
+.item-sold {
+    color: grey;
+}
+
+
+/* CSS UNTUK ADD ITEM */
+
+.form {
+    margin-top: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: max-content;
+    height: max-content;
+}
+
+.add {
+    width: 60vw;
+    height: 5rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.add-products {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: max-content;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.status-item {
+    width: 76vw;
+    height: 4rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.status-item h1 {
+    margin: 15px 0;
+}
+
+.add .form-input {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form-input .text-input {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-input .text-input input[type=text] {
+    border-radius: 5px;
+    border: 1px solid green;
+    padding-left: 0.5rem;
+}
+
+.form-input .img-input {
+    text-align: center;
+    width: max-content;
+}
+
+.form-input .img-input input[type=file] {
+    width: 11rem;
+}
+
+.form-input .submit {
+    margin-top: 2rem;
+    width: max-content;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    background: green;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.middle-box {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* CSS UNTUK ABOUT ME */
+
+.about-me {
+    margin-top: 7rem;
+    width: 80%;
+    height: 30rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.stay-bot {
+    position: relative;
+    top: 13.2%;
+}
+
+.stay-there {
+    position: relative;
+    top: 7.25%;
+}
+
+/* CSS UNTUK CONTACT ME */
+
+
+.contact-me {
+    margin-top: 7rem;
+    width: 50%;
+    height: 30rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+}
+
+.comment {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    height: 100%;
+}
+
+.comment-name {
+    margin-right: 15rem;
+    display: flex; 
+    justify-content: center;
+}
+
+.comment-name p {
+    margin-left: 10px;
+}
+
+.comment-area {
+    display: flex; 
+    justify-content: center;
+    margin: 2rem;
+}
+
+.comment-area .comment-form textarea {
+    margin-top: 1rem;
+    width: 30rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid green;
+}
+
+.comment-submit {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.comment-submit .comment-submit-btn {
+    width: max-content;
+    padding: 0.5rem;
+    height: 2.3rem;
+    border-radius: 5px;
+    border: none;
+    background: green;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    
+}
+
+
+.footer {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(38, 38, 38);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer h1 {
+    margin: 20px 0 0px 0;
+    color: rgb(38, 38, 38);
+}
