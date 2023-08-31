@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD operations using JSON and local storage in JavaScript</title>
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="/assets/style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="left">
+                <img src="/assets/icon.png" height="70px" alt="">
+            </div>
+            <div class="middle">
+                <div class="search-bar">
+                    <form action="">
+                        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;Type Something ...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <ul class="mini-menu">
+                    <li>iPhone 14 Pro Max</li>
+                    <li>Hoodie</li>
+                    <li>Macbook Air</li>
+                    <li>Samsung S23 Ultra</li>
+                    <li>Shoes</li>
+                    <li>Smart Watch</li>
+                    <li>Ticket</li>
+                    <li>Vouchers</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img class="flip" src="/assets/cart.png" height="40px" alt="">
+            </div>
+        </div>
+        <div class="box">
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Insert New Book</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <input type='text' id='txttitle' placeholder='title..'>
+                            <input type='text' id='txtauthor' placeholder='author..'>
+                            <input type='number' id='txtprice' placeholder='price..'>
+                            <input type='number' id='txtstock' placeholder='stock..'>
+                            <input type='text' id='txtdescription' placeholder='description..'>
+                            <button id= 'btnaddBooks' onclick='addBook()' class='btn btn-success'> <i class='fa fa-plus-circle' aria-hidden='true'></i> Save</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="about-me">
+                <div class="" style="display: flex; flex-direction: row;">
+                    <div class="addButton">
+                        <button id="myBtn" class="btn-btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add</button>
+                    </div>
+    
+                    <div class="addButton">
+                        <button onclick="wipe()" class="btn-btn-success"><i class="fa fa-plus-circle" aria-hidden="true"></i> Delete All</button>
+                    </div>
+                </div>
+                
+                <div class="profile">
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th style="width: 15rem;">Id</th>
+                                <th style="width: 15rem;">Title</th>
+                                <th style="width: 15rem;">Author</th>
+                                <th style="width: 15rem;">Price</th>
+                                <th style="width: 15rem;">Stock</th>
+                                <th style="width: 15rem;">Description</th>
+                                <th style="width: 15rem;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tblbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
+
+

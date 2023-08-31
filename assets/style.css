@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-image: url("/assets/wallpaper.jpg");
+    height: 100vh;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+}
+
+.header {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(38, 38, 38);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+.header .left {
+    width: 20vw;
+}
+
+.header .right {
+    width: 10vw;
+}
+
+.header .middle {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-right: 9rem;
+}
+
+.header .middle .search-bar {
+    text-align: center;
+}
+
+.header .middle .search-bar input[type=text] {
+    padding: 0.37 0;
+    margin-top: 0.3rem;
+    border: none;
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 10px;
+}
+
+.header .middle .search-bar button {
+    padding: 0.37 0;
+    width: 7%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.header .middle .mini-menu {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-evenly;
+   padding: 0px;
+   margin: 0.7rem 1rem 0.3rem 0.3rem;
+}
+
+.header .middle .mini-menu li {
+    font-size: small;
+    cursor: pointer;
+}
+
+.header .middle .mini-menu li:hover {
+    color: orangered;
+}
+
+.flip {
+    transform: scaleX(-1);
+    margin-top: 1rem;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* CSS UNTUK ABOUT ME */
+
+.about-me {
+    margin-top: 10rem;
+    width: max-content;
+    height: 30rem;
+    color: rgb(38, 38, 38);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: (10px);
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.stay-bot {
+    position: relative;
+    top: 13.2%;
+}
+
+.stay-there {
+    position: relative;
+    top: 7.25%;
+}
+
+
+
+
+.footer {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgb(38, 38, 38);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer h1 {
+    margin: 20px 0 0px 0;
+    color: rgb(38, 38, 38);
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    padding-top: 5rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+.modal-content {
+position: relative;
+background-color: #fefefe;
+margin: auto;
+margin-top: 3rem;
+padding: 0;
+border: 1px solid #888;
+width: 80%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.modal-content form input {
+    width: max-content;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 0.37rem 0 0 1rem;
+}
+
+.addButton {
+    text-align: end;
+}
+
+.addButton button {
+    padding: 1rem; margin: 1rem 2rem 1rem 1rem; border-radius: 10px;
+}
+
+.addButton :hover {
+    background-color: green;
+    color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-30rem; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-30rem; opacity:0}
+to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-header {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+padding: 2px 16px;
+background-color: #5cb85c;
+color: white;
+}
