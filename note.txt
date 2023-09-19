@@ -1,0 +1,35 @@
+shopping list : {
+  "lists": [["A", 20], ["C", 10], ["E", 5]],
+  "payment": ["CREDIT", 7]
+}
+
+ubah-tagihan/1 {
+    "newValue": "1000000"
+}
+
+test-generateMonthlyBill {
+  "totalAll": "5000000",
+  "creditMonth": "7"
+}
+
+tambah {
+    "title" : "One Piece",
+    "price" : 400000,
+    "genre" : ["Action", "Adventure"],
+    "author" : "Eiichiro Oda",
+    "stock" : 10,
+    "purchased" : 2
+}
+
+edit {
+    "title" : "Naruto",
+    "price" : 300000,
+    "genre" : ["Action", "Ninja"],
+    "author" : "Masashi Kishimoto",
+    "stock" : 20,
+    "purchased" : 0
+}
+
+
+
+link untuk auth header generator : https://www.blitter.se/utils/basic-authentication-header-generator/
