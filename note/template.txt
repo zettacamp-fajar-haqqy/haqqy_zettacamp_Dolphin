@@ -1,0 +1,339 @@
+1. insertOne
+db.profiles.insertOne({name: "hanako kin", age: 24, gender: "male", hobbies: ["Reading", "Learning", "Gaming"], address: {street: "Jl. California", city: "Tokyo", country: "Japan"}})
+
+2. insertMany
+db.profiles.insertMany([
+    {name: "Fajar", age: 20, gender: "male", hobbies: ["Reading", "Gaming"], address: {street: "Jl. Tasikmalaya", city: "Pyongyang", country: "North Korea"}},
+    {name: "Haqqy", age: 17, gender: "male", hobbies: ["Gaming", "Hiking"], address: {street: "Jl. Kalimantan", city: "Pripyat", country: "Ukraine"}},
+    {name: "Ashbahanie", age: 25, gender: "male", hobbies: ["Learning", "Programming"], address: {street: "Jl. Surabaya", city: "Beijing", country: "China"}},
+    {name: "Alysia", age: 21, gender: "female", hobbies: ["Sleeping", "Eating"], address: {street: "Jl. Malang", city: "Seoul", country: "South Korea"}},
+])
+
+dummy data:
+db.profiles.insertMany([
+    {name: "Tch", age: 30, gender: "male", hobbies: ["Reading", "Gaming"], address: {street: "Jl. Tasikmalaya", city: "Pyongyang", country: "North Korea"}},
+    {name: "Bruh", age: 37, gender: "male", hobbies: ["Gaming", "Hiking"], address: {street: "Jl. Kalimantan", city: "Pripyat", country: "Ukraine"}},
+    {name: "Mang eak", age: 35, gender: "male", hobbies: ["Learning", "Programming"], address: {street: "Jl. Surabaya", city: "Beijing", country: "China"}},
+    {name: "Rill kah manies", age: 31, gender: "female", hobbies: ["Sleeping", "Eating"], address: {street: "Jl. Malang", city: "Seoul", country: "South Korea"}},
+])
+
+3. updateOne
+db.profiles.updateOne({name: "Fajar"}, {$set: {age: 19}})
+
+4. updateMany
+db.profiles.updateMany({hobbies: {$in: ["Gaming"]}}, {$set: {"address.street": "Jl Kenangan"}})
+
+5. find inside array
+db.profiles.find({hobbies: {$in: ["Reading"]}})
+
+6. find in embedded document
+db.profiles.find({"address.country": "Ukraine"})
+
+7. update array
+db.profiles.updateMany({age: {$lt: 23}}, {$push: {hobbies: "Swimming"}})
+
+8. deleteOne
+db.profiles.deleteOne({name: "Bruh"})
+
+9. deleteMany
+db.profiles.deleteMany({age: {$gt: 29}})
+
+10. Create new Bookshelves
+
+{
+	"name" : "Manga Section",
+	"description" : "Anime refers to a style of animation that originated in Japan and has become a global phenomenon, known for its diverse genres, vibrant artistry, and compelling storytelling that appeals to audiences of all ages.",
+	"book" : ["65092cb588820ead4f113b47", "65092cb588820ead4f113b49", "65092cb588820ead4f113b4b", "65092cb588820ead4f113b4d", "65092cb588820ead4f113b4f"],
+	"__v" : 0
+}
+
+11. Checking a specific book from Bookshelves collection
+
+db.bookshelves.aggregate([
+  {
+    $lookup: {
+      from: "books",
+      localField: "book",
+      foreignField: "_id",
+      as: "connectedBook"
+    }
+  },
+  {
+    $unwind: "$connectedBook"
+  },
+  {
+    $match: {
+      "connectedBook._id": ObjectId("65092cb588820ead4f113b47") // Replace with the actual ObjectId of the book
+    }
+  },
+  {
+    $project: {
+      _id: "$connectedBook._id",
+      title: "$connectedBook.title",
+      price: "$connectedBook.price",
+      genre: "$connectedBook.genre",
+      author: "$connectedBook.author",
+      stock: "$connectedBook.stock",
+      purchased: "$connectedBook.purchased"
+    }
+  }
+])
+
+12. Check book value from Bookshelves collection
+
+cara 1
+
+db.bookshelves.aggregate([
+  {
+    $lookup: {
+      from: "books",
+      localField: "book",
+      foreignField: "_id",
+      as: "bookDetails"
+    }
+  },
+  {
+    $unwind: "$bookDetails"
+  },
+  {
+    $group: {
+      _id: "$_id",
+      name: { $first: "$name" },
+      description: { $first: "$description" },
+      __v: { $first: "$__v" },
+      book: { $push: "$bookDetails" }
+    }
+  }
+])
+
+cara 2
+
+db.bookshelves.aggregate([
+  {
+    $lookup: {
+      from: "books",
+      localField: "book",
+      foreignField: "_id",
+      as: "bookDetails"
+    }
+  },
+  {
+    $project: {
+      _id: 1,
+      name: 1,
+      description: 1,
+      book: {
+        $filter: {
+          input: "$bookDetails",
+          as: "bookDetail",
+          cond: {
+            $in: ["$$bookDetail._id", [ObjectId("65092cb588820ead4f113b47"), ObjectId("65092cb588820ead4f113b49"), ObjectId("65092cb588820ead4f113b4b"), ObjectId("65092cb588820ead4f113b4d"), ObjectId("65092cb588820ead4f113b4f")]]
+          }
+        }
+      },
+      __v: 1
+    }
+  }
+])
+
+13. Check bookshelves value form books collection
+
+db.books.aggregate([
+  {
+    $lookup: {
+      from: "bookshelves",
+      localField: "type",
+      foreignField: "_id",
+      as: "bookshelvesDetails"
+    }
+  },
+  {
+    $unwind: "$bookshelvesDetails"
+  },
+  {
+    $group: {
+      _id: "$_id",
+      type: { $push: "$bookshelvesDetails" },
+      title: { $first: "$title" },
+      price: { $first: "$price" },
+      genre: { $first: "$genre" },
+      author: { $first: "$author" },
+      stock: { $first: "$stock" },
+      purchased: { $first: "$purchased" },
+      __v: { $first: "$__v" },
+    }
+  }
+])
+
+14. Manwha List
+const manhwaList = [
+    {
+        title: "Solo Leveling",
+        price: 300000,
+        genre: ["Action", "Fantasy"],
+        author: "Chugong",
+        stock: 20,
+        purchased: 10
+    },
+    {
+        title: "Tower of God",
+        price: 270000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "SIU",
+        stock: 18,
+        purchased: 8
+    },
+    {
+        title: "The God of High School",
+        price: 260000,
+        genre: ["Action", "Supernatural"],
+        author: "Yongje Park",
+        stock: 17,
+        purchased: 7
+    },
+    {
+        title: "Unordinary",
+        price: 240000,
+        genre: ["Action", "Fantasy"],
+        author: "Uru-Chan",
+        stock: 22,
+        purchased: 12
+    },
+    {
+        title: "True Beauty",
+        price: 230000,
+        genre: ["Romance", "Comedy", "Drama"],
+        author: "Yaongyi",
+        stock: 25,
+        purchased: 15
+    },
+    {
+        title: "Bastard",
+        price: 220000,
+        genre: ["Thriller", "Horror"],
+        author: "Carnby Kim",
+        stock: 16,
+        purchased: 6
+    },
+    {
+        title: "Hardcore Leveling Warrior",
+        price: 250000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Kim Sehoon",
+        stock: 21,
+        purchased: 11
+    },
+    {
+        title: "I Love Yoo",
+        price: 230000,
+        genre: ["Romance", "Drama"],
+        author: "Quimchee",
+        stock: 19,
+        purchased: 9
+    },
+    {
+        title: "Lookism",
+        price: 240000,
+        genre: ["Drama", "Slice of Life"],
+        author: "Taejoon Park",
+        stock: 20,
+        purchased: 10
+    },
+    {
+        title: "Noblesse",
+        price: 260000,
+        genre: ["Action", "Supernatural", "Vampire"],
+        author: "Son Jeho, Lee Kwangsu",
+        stock: 23,
+        purchased: 13
+    }
+]
+
+15. Manhua List
+const manhuaList = [
+    {
+        title: "Tales of Demons and Gods",
+        price: 250000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Mad Snail",
+        stock: 15,
+        purchased: 5
+    },
+    {
+        title: "The King's Avatar",
+        price: 260000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Butterfly Blue",
+        stock: 18,
+        purchased: 8
+    },
+    {
+        title: "Douluo Dalu",
+        price: 240000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Tang Jia San Shao",
+        stock: 17,
+        purchased: 7
+    },
+    {
+        title: "Apotheosis",
+        price: 270000,
+        genre: ["Action", "Fantasy"],
+        author: "Ranzai Studio",
+        stock: 16,
+        purchased: 6
+    },
+    {
+        title: "Martial Peak",
+        price: 230000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Momo",
+        stock: 20,
+        purchased: 10
+    },
+    {
+        title: "Rebirth of the Urban Immortal Cultivator",
+        price: 240000,
+        genre: ["Action", "Fantasy"],
+        author: "Ten Miles Swords God, Mochi",
+        stock: 21,
+        purchased: 11
+    },
+    {
+        title: "Star Martial God Technique",
+        price: 220000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Mad Snail",
+        stock: 19,
+        purchased: 9
+    },
+    {
+        title: "Battle Through the Heavens",
+        price: 260000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Heavenly Silkworm Potato",
+        stock: 22,
+        purchased: 12
+    },
+    {
+        title: "Versatile Mage",
+        price: 250000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Chaos",
+        stock: 23,
+        purchased: 13
+    },
+    {
+        title: "I Shall Seal the Heavens",
+        price: 280000,
+        genre: ["Action", "Adventure", "Fantasy"],
+        author: "Er Gen",
+        stock: 25,
+        purchased: 15
+    }
+];
+
+
+
+
+

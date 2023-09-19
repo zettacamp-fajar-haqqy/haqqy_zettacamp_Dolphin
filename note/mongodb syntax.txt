@@ -1,0 +1,28 @@
+1. getOne or getMany
+db.collection_name.findOne({ criteria })
+db.collection_name.find({ criteria })
+
+2. insertOne or insertMany
+db.collection_name.insertOne({ document_data })
+db.collection_name.insertMany([{ document_data1 }, { document_data2 }, { document_data3 }])
+
+3. create data with array
+db.collection_name.insertOne({ name: "Haki", hobbies: [ "Reading", "Gaming", "Studying" ] })
+
+4. create data with embedded document
+db.collection_name.insertOne({ name: "Haki", address: { street: "123 Main St", city: "Anytown", state: "CA" } })
+
+5. updateOne or updateMany
+db.collection_name.updateOne({ criteria }, { $set: { update_data } })
+db.collection_name.updateMany({ criteria }, { $set: { update_data } })
+
+6. update with array
+db.collection_name.updateOne({ criteria }, { $push: { hobbies: "Swimming" } })
+
+7. update with embedded document
+db.collection_name.updateOne({ criteria }, { $set: { "address.city": "Newtown" } })
+
+8. deleteOne or deleteMany
+db.collection_name.deleteOne({ criteria })
+db.collection_name.deleteMany({ criteria })
+
