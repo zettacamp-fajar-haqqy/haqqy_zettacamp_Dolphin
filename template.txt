@@ -1,0 +1,40 @@
+1. insertOne
+db.profiles.insertOne({name: "hanako kin", age: 24, gender: "male", hobbies: ["Reading", "Learning", "Gaming"], address: {street: "Jl. California", city: "Tokyo", country: "Japan"}})
+
+2. insertMany
+db.profiles.insertMany([
+    {name: "Fajar", age: 20, gender: "male", hobbies: ["Reading", "Gaming"], address: {street: "Jl. Tasikmalaya", city: "Pyongyang", country: "North Korea"}},
+    {name: "Haqqy", age: 17, gender: "male", hobbies: ["Gaming", "Hiking"], address: {street: "Jl. Kalimantan", city: "Pripyat", country: "Ukraine"}},
+    {name: "Ashbahanie", age: 25, gender: "male", hobbies: ["Learning", "Programming"], address: {street: "Jl. Surabaya", city: "Beijing", country: "China"}},
+    {name: "Alysia", age: 21, gender: "female", hobbies: ["Sleeping", "Eating"], address: {street: "Jl. Malang", city: "Seoul", country: "South Korea"}},
+])
+
+dummy data:
+db.profiles.insertMany([
+    {name: "Tch", age: 30, gender: "male", hobbies: ["Reading", "Gaming"], address: {street: "Jl. Tasikmalaya", city: "Pyongyang", country: "North Korea"}},
+    {name: "Bruh", age: 37, gender: "male", hobbies: ["Gaming", "Hiking"], address: {street: "Jl. Kalimantan", city: "Pripyat", country: "Ukraine"}},
+    {name: "Mang eak", age: 35, gender: "male", hobbies: ["Learning", "Programming"], address: {street: "Jl. Surabaya", city: "Beijing", country: "China"}},
+    {name: "Rill kah manies", age: 31, gender: "female", hobbies: ["Sleeping", "Eating"], address: {street: "Jl. Malang", city: "Seoul", country: "South Korea"}},
+])
+
+3. updateOne
+db.profiles.updateOne({name: "Fajar"}, {$set: {age: 19}})
+
+4. updateMany
+db.profiles.updateMany({hobbies: {$in: ["Gaming"]}}, {$set: {"address.street": "Jl Kenangan"}})
+
+5. find inside array
+db.profiles.find({hobbies: {$in: ["Reading"]}})
+
+6. find in embedded document
+db.profiles.find({"address.country": "Ukraine"})
+
+7. update array
+db.profiles.updateMany({age: {$lt: 23}}, {$push: {hobbies: "Swimming"}})
+
+8. deleteOne
+db.profiles.deleteOne({name: "Bruh"})
+
+9. deleteMany
+db.profiles.deleteMany({age: {$gt: 29}})
+
